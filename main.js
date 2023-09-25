@@ -60,7 +60,7 @@ const showWinner = (winner, computerChoice) => {
     result.innerHTML = ` 
       <h1 class="text-win">You Win</h1>
       <i id="${computerChoice}" class="choice fas fa-hand-${computerChoice} fa-10x"></i>
-      <p>Computer chose <strong>${computerChoice}</strong></p>
+      <p>Computer chose <strong>${computerChoice.charAt(0).toUpperCase()+computerChoice.slice(1)}</strong></p>
       `;
   } else if (winner === "computer") {
     //increase by score
@@ -69,13 +69,13 @@ const showWinner = (winner, computerChoice) => {
     result.innerHTML = ` 
       <h1 class="text-win">You Lose</h1>
       <i id="${computerChoice}" class="choice fas fa-hand-${computerChoice} fa-10x"></i>
-      <p>Computer chose <strong>${computerChoice}</strong></p>
+      <p>computer chose <strong>${computerChoice.charAt(0).toUpperCase()+computerChoice.slice(1)}</strong></p>
       `;
   } else {
     result.innerHTML = `
-          <h1>It is a draw</h1>
+          <h1>it is a draw</h1>
           <i id="${computerChoice}" class="choice fas fa-hand-${computerChoice} fa-10x"></i>
-          <p>Computer chose <strong>${computerChoice}</strong></p>
+          <p>computer chose <strong>${computerChoice.charAt(0).toUpperCase()+computerChoice.slice(1)}</strong></p>
           `;
   }
 
@@ -94,14 +94,14 @@ const cleareModal = (e) => {
 };
 
 const restartGame = () => {
-    scoreBoard.player = 0;
-    scoreBoard.computer = 0;
-    score.innerHTML = `
+  scoreBoard.player = 0;
+  scoreBoard.computer = 0;
+  score.innerHTML = `
     <p>Player: 0</p>
     <p>Computer: 0</p>
-    `
-}
+    `;
+};
 //  Event listeners
 choice.forEach((choice) => choice.addEventListener("click", play));
 window.addEventListener("click", cleareModal);
-restart.addEventListener("click", restartGame)
+restart.addEventListener("click", restartGame);
