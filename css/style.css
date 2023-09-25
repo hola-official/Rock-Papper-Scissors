@@ -90,3 +90,26 @@ body {
 .text-win {
   color: var(--win-color);
 }
+
+@keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  @media (max-width: 700px) {
+    .choice {
+      font-size: 110px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .choice {
+      font-size: 80px;
+    }
+  }
