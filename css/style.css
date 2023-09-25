@@ -16,7 +16,7 @@
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
-  background: #fff;
+  background: lightcyan;
   color: #333;
 }
 
@@ -27,6 +27,7 @@ body {
   padding: 0 2rem;
   text-align: center;
 }
+
 .restart-btn {
   display: none;
   background: var(--light-color);
